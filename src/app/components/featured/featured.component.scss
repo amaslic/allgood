@@ -1,0 +1,161 @@
+@import '../../../styles.scss';
+
+
+$featured-info-footer-bg: #C2C6D3;
+$title-color: #051C50;
+
+
+.featured {
+	background-color: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	h1 {
+		text-align: center;
+		padding-bottom: 50px;
+		color: $title-color;
+	}
+}
+
+.featured-item {
+	border-radius: 15px;
+	max-width: 340px;
+	background-color: $gray-bg;
+	color: $title-color;
+	transition: 1s ease;
+	img {
+		border-radius: 15px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	&:hover {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+		transition: 1s ease;
+	}
+}
+
+.featured-info {
+	padding: 15px;
+}
+
+.featured-text {
+	color: #707171;
+	height: 60px;
+}
+
+.featured-categorie {
+	border-top: 1px solid $featured-info-footer-bg;
+	text-align: center;
+	font-weight: bold;
+}
+
+.featured-categorie{
+	&:hover{
+		color: $red;
+		cursor: pointer;
+	}
+}
+
+.box{
+	justify-content: flex-end;
+    display: flex;
+    margin: 0;
+	padding: 0;
+	padding-bottom: 70px;
+	background-color: #fff;
+}
+
+.featured-box{
+	max-width: 1600px;
+    width: 100%;
+	background-color: $gray-bg;
+}
+
+.info-box{
+	margin: auto;
+	max-width: 620px;
+	text-align: center;
+	color: $title-color;
+}
+
+.featured-box-circle{  
+
+	position: absolute;
+	left: -1px;
+	bottom: -1px;
+	transform:translate(50%,-50%);
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: red;
+	mix-blend-mode:darken;
+	z-index: 9999;
+}
+
+.featured-box{
+	&::before{ 
+		content: "";
+		position: absolute;
+		height: 120px;
+		margin-top: 225px;
+		margin-left: -60px;
+		width: 120px;
+		border-radius: 50%;
+		background: transparent;
+		border: 3px solid #3FDDAC;
+	}
+	&:after{
+		content: "";
+		position: absolute;
+		height: 40px;
+	
+		margin-top: -15px;
+		margin-left: -20px;
+		width: 40px;
+		border-radius: 50%;
+		background: transparent;
+		border: 3px solid #3FDDAC;
+	}
+  }
+
+
+.featured-box{
+	padding: 0;
+}
+
+.btn-box{
+	padding: 15px;
+	background-color: $red;
+	color: #fff;
+	border-radius: 15px;
+	border: 1px solid $red;
+}
+
+.btn-box{
+	&:hover{
+		background-color: transparent;
+		color: $red;
+		cursor: pointer;
+		border: 1px solid $red;
+	}
+	&:active{
+		background-color: transparent;
+		color: $red;
+		cursor: pointer;
+		border: 1px solid $red;
+	}
+}
+
+
+@media (max-width: 640px){
+	.featured-box{
+		&::before{ 
+			display: none;
+		}
+		&:after{
+			display: none;
+		}
+	  }
+
+}

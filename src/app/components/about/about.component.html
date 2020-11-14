@@ -1,0 +1,60 @@
+<div class="container-fluid about">
+	<div class="about-title">
+		<h1>
+			How it works
+		</h1>
+
+		<h3>
+			Learn more about AllGood
+		</h3>
+		<hr class="clearfix">
+	</div>
+
+	<div class="shapes container pt-3 large-screen-about">
+
+		<div class="row item-shape">
+			
+			<div *ngFor="let item of items;">
+				
+					<div  class="col" [ngClass]=generateClass(item)>
+						<fa-icon [icon]="setIcon(item.icon)"></fa-icon>
+					</div>
+					<h4 class="item-title pt-3" >{{item.title}}</h4>
+					<p class="item-text pt-3">
+						{{item.text}}
+					</p>
+			
+
+			</div>
+			
+		</div>
+
+		<div class="row item-shape pt-8">
+				<div class="col-6">
+					<img src="../../../assets/images/video.png" alt="video-allgood" class="img-fluid" />
+				</div>
+				<div class="col-3">
+					<img src="../../../assets/images/watch-video.png" class="img-fluid video-arrow" alt="watch-video">
+				</div>
+				<div class="col-3">
+					<div class="cat-red heart">
+						<fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+					</div>
+					<h4 class="item-title pt-3">
+						Donate
+					</h4>
+					<p class="item-text pt-3">
+						AllGood sends the proceeds directly to the charity/campaign you chose to support.
+					</p>
+				</div>
+		</div>
+		
+	</div>
+
+	<div class="container pt-3 mobile-screen-about">
+	
+		<img src="../../../assets/images/video.png" class="img-fluid" alt="video">
+	</div>
+	
+
+</div>

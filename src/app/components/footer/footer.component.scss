@@ -1,0 +1,51 @@
+@import '../../../styles.scss';
+
+$blue-color-text: #24325C;
+$gray-color-text: #666666;
+
+
+footer {
+	background-color: $gray-bg;
+}
+p {
+	color: $gray-color-text;
+}
+div.copyright {
+	color: $gray-color-text;
+}
+.footer-logo {
+	img {
+		max-width: 120px;
+	}
+}
+a {
+	color: inherit;
+	&:hover {
+		color: $red;
+	}
+}
+.copyright {
+	a {
+		padding-left: 10px;
+	}
+}
+ul.social {
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	li {
+		padding-right: 10px;
+		fa-icon {
+			font-size: 24px;
+			color: $blue-color-text blue;
+			&:hover {
+				color: red;
+				cursor: pointer;
+			}
+		}
+	}
+}
+h5 {
+	color: $blue-color-text;
+}
+

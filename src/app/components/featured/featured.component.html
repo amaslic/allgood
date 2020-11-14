@@ -1,0 +1,60 @@
+
+<div class="container-fluid featured">
+	<div class="">
+		<h1>Featured items</h1>
+
+		<owl-carousel-o [options]="customOptions">
+			<ng-template carouselSlide *ngFor="let f of featured;">
+				<div class="slide featured-item">
+					<img src="../../../assets/images/furniture.jpg" alt=f.title>
+					<div class="featured-info">
+						<h4 class="pt-3">{{f.title}}</h4>
+						<p class="featured-user pt-2">
+							{{f.user}}
+						</p>
+
+						<p class="featured-text">
+							{{f.description}}
+						</p>
+
+						<h3>$ {{f.price}}</h3>
+
+						<div class="featured-categorie pt-2">
+							<fa-icon [icon]="faHandHoldingUsd"></fa-icon> {{f.category}}
+						</div>
+					</div>
+				</div>
+			</ng-template>
+		
+		</owl-carousel-o>
+
+	</div>
+
+
+
+</div>
+
+
+<div class="container-fluid box">
+	<div class="featured-box">
+		<div class="info-box">
+			<h3 class="pt-4">Are you a Charity or Organisation 
+				<br />looking to Fundraise?
+			</h3>
+
+			<p class="pt-4">
+				Want to register with AllGood.market so peaople can donate the proceeds of their sales
+				to you?
+				<br />
+				Please contact us at info@allgood.market or complete our online form.
+			</p>
+
+			<p>
+				<button class="btn-box">Sign up charity/campaign</button>
+			</p>
+		
+		</div>
+
+		
+	</div>
+</div>

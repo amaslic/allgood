@@ -1,0 +1,82 @@
+<div class="container-fluid header-wrap">
+	<div class="top-bar">
+		<ul ngbNav #nav="ngbNav" class="navbar">
+			<li ngbNavItem>
+				
+				  <img src="../../../assets/images/logo.png" alt="allgood-logo" class="img-fluid" />
+			 
+			</li>
+			<li class="d-md-none">
+				<div class="input-group mobile-width">
+					<input  class="form-control" type="text" placeholder="Search or Post" />
+					<div class="input-group-append mobile-input">
+						<label type="button" class="btn ">
+							<fa-icon [icon]="faSearch"></fa-icon>
+						</label>
+					</div>
+				</div>	
+			</li>
+			<li ngbNavItem class="d-none d-md-block">
+			  <label type="button" class="btn active">Search items</label>
+			  <label type="button" class="btn">Post items</label>
+			</li>
+			
+			<li ngbNavItem ngbDropdown class="user-right d-none d-md-block">
+				<fa-icon [icon]="faEnvelope"></fa-icon>
+				<fa-icon [icon]="faBell">
+				</fa-icon>
+				<span class="notification">{{unread}}</span>
+				<img src="../../../assets/images/user.png" alt="allgood-logo" class="img-fluid rounded-circle" />
+				<button  class="btn btn-user" id="dropdownuser" ngbDropdownToggle>{{user.name}}</button>
+				  <div ngbDropdownMenu aria-labelledby="dropdownuser">
+					<button ngbDropdownItem>Profile</button>
+					<button ngbDropdownItem>Logout</button>
+				  </div>
+			  </li>
+		  </ul>
+	</div>
+	
+	<hr class="clearfix w-100 d-md-none">
+
+	<div class="d-none d-md-flex search form-inline justify-content-center">
+		<input (ngModel)="loc" [ngbTypeahead]="searchLoc" class="form-control" type="text" placeholder="Location" />
+		<input (ngModel)="cats" [ngbTypeahead]="searchCat"class="form-control" type="text" placeholder="Category" />
+		<div class="input-group">
+			<input (ngModel)="char" [ngbTypeahead]="searchChar" class="form-control" type="text" placeholder="Charity" aria-describedby="basic-addon2" />
+			<div class="input-group-append">
+				<label type="button" class="btn absolute">
+					<fa-icon [icon]="faSearch"></fa-icon>
+				</label>
+			</div>
+		</div>	
+			
+	
+	</div>
+
+	
+	<div class="container main-info">
+		<div class="row">
+		<ul class="col-md-6 align-items-center">
+			<li *ngFor="let categories of cat; let i = index;" class="col-md-12 categories align-items-center" [ngClass]=categories.color>
+				
+					 <span class="icon"  [ngClass]=categories.bg>
+						<fa-icon [icon]="setIcon(categories.icon)"></fa-icon>
+					 </span>
+					
+					<span class="categories-text">
+						{{categories.text}}
+					</span>
+					 </li>
+					
+				</ul>
+		<div class="col-md-6">
+			<div class="main-img">
+				<img src="../../../assets/images/header-women.png" alt="allgood-header" class="img-fluid" />
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+

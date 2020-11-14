@@ -1,0 +1,282 @@
+@import '../../../styles.scss';
+
+$cat-bg: #1C284B;
+$text-color: #fff;
+$icon-size: 32px;
+$cat-border-radius: 20px;
+$cat-height: 65px;
+
+input {
+	&:focus {
+		outline: none;
+		border-color: inherit;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+button {
+	&:focus {
+		outline: none;
+		border-color: inherit;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+.header-wrap {
+	background-color: $blue-bg;
+	padding-bottom: 100px;
+	border-bottom-left-radius: 50% 7%;
+	border-bottom-right-radius: 50% 7%;
+	box-shadow: 8px 1px 12px rgba(0,0,0,.3);
+}
+.main-info.row {
+	flex-direction: row;
+}
+.search {
+	margin-top: 20px;
+	input {
+		border: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		&:first-child {
+			border-right: 1.5px solid black;
+		}
+		&:nth-child(2) {
+			border-radius: 0;
+			border-right: 1px solid black;
+		}
+	}
+}
+.btn-user {
+	background-color: transparent;
+	color: $text-color;
+	border: 1px solid $red;
+}
+.dropdown-menu {
+	left: -25px;
+}
+.row-categories {
+	max-width: 320px;
+}
+.navbar {
+	li {
+		label {
+			color: $text-color;
+			cursor: pointer;
+		}
+	}
+}
+
+
+
+.categories{
+	max-width: 340px;
+	color: $text-color;
+	border-radius: $cat-border-radius;
+	background-color: $cat-bg;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+	padding: 0;
+	height: $cat-height;
+}
+
+.categories .icon{
+	border-radius: calc(#{$cat-border-radius} - 1px);
+	width: $cat-height;
+	height: $cat-height;
+	align-items: center;
+    justify-content: center;
+	display: flex;
+}
+
+.categories {
+	&:hover {
+		-webkit-animation: swing 1s ease;
+		animation: swing 1s ease;
+		-webkit-animation-iteration-count: 1;
+		animation-iteration-count: 1;
+	}
+}
+
+.search {
+	input {
+		padding: 15px;
+		&:first-child {
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
+	}
+	label {
+		border-radius: 20px;
+		background-color: $red;
+		cursor: pointer;
+		color: $text-color;
+	}
+}
+
+
+.navbar {
+	li {
+		img.rounded-circle {
+			max-width: 40px;
+			border: 1px solid $red;
+			margin-right: 5px;
+		}
+	}
+	.user-right {
+		fa-icon {
+			color: #fff;
+			padding-right: 20px;
+			&:hover {
+				color: $red;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+.notification{
+	position: absolute;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: $red;
+    text-align: center;
+    font-size: 10px;
+    left: 10px;
+}
+
+.navbar {
+	li {
+		label {
+			&:hover {
+				color: $red;
+				box-shadow: inset 0 0 0 1px $red;
+			}
+		}
+		label.active {
+			border-bottom: 1px solid #fff;
+			&:hover {
+				border: 0;
+			}
+		}
+		button {
+			&:hover {
+				color: $red;
+				box-shadow: inset 0 0 0 1px $red;
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
+		button.active {
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+.search {
+	.input-group {
+		input {
+			border-radius: 0;
+		}
+	}
+}
+
+
+
+
+.bg-green{
+	background-color: $green;
+}
+
+.bg-purple{
+	background-color: $purple;
+}
+
+.bg-red{
+	background-color: $red;
+}
+
+.main-info {
+	ul {
+		padding: 50px;
+	}
+}
+.categories {
+	fa-icon {
+		font-size: $icon-size;
+	}
+}
+
+
+.categories-text{
+	padding-left: 10px;
+	max-width: 200px;
+    line-height: 20px;
+}
+
+.main-info{
+	margin-top: 50px;
+}
+
+.cat-green{
+	border: 1px solid $green;
+}
+
+.cat-purple{
+	border: 1px solid $purple;
+}
+
+.cat-red{
+	border: 1px solid $red;
+}
+
+label.btn.absolute {
+	position: absolute;
+	right: -20px;
+	z-index: 99999;
+	width: 60px;
+	font-size: 28px;
+}
+.navbar {
+	.mobile-input {
+		label.btn {
+			background-color: $red;
+			&:hover {
+				background-color: transparent;
+				border-color: $red;
+			}
+		}
+	}
+}
+.input-group-append.mobile-input {
+	height: 28px;
+}
+
+.mobile-width{
+	max-width: 150px;
+}
+
+hr.w-100{
+	border-color: #fff;
+}
+
+
+@media (max-width: 640px){
+	.main-info {
+		.row {
+			flex-direction: column-reverse;
+		}
+	}
+	
+	.header-wrap{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	
+		box-shadow: 0;
+	}
+
+}
